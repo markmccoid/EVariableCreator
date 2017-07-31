@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<ScappleDocument ID="C6A1A221-30ED-4FA5-940B-7ECA7AA654D1" Version="1.1">
+   <Notes>
+      <Note Width="133.862" FontSize="12" ID="0" Position="457.0,252.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.808835 0.872419 0.801343</Fill>
+            <Border Weight="1">0.399100 0.583322 0.354864</Border>
+         </Appearance>
+         <String>Add QV Var Container</String>
+         <ConnectedNoteIDs>10</ConnectedNoteIDs>
+      </Note>
+      <Note Width="75.3906" FontSize="12" ID="1" Position="466.4,343.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.934157 0.888319 0.785290</Fill>
+            <Border Weight="1">0.269490 0.164034 0.186694</Border>
+         </Appearance>
+         <String>Add QV Var</String>
+      </Note>
+      <Note Width="118.103" FontSize="12" ID="2" Position="692.2,110.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.898329 0.817472 0.865339</Fill>
+            <Border Weight="1">0.690303 0.407263 0.550912</Border>
+         </Appearance>
+         <String>saveToServer(data)</String>
+      </Note>
+      <Note Width="90.0879" FontSize="12" ID="3" Position="724.2,147.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.898329 0.817472 0.865339</Fill>
+            <Border Weight="1">0.690303 0.407263 0.550912</Border>
+         </Appearance>
+         <String>onClearForm()</String>
+      </Note>
+      <Note Width="189.062" FontSize="12" ID="4" Position="40.6,64.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>renderDropDownWOnChange</String>
+      </Note>
+      <Note Width="104.102" FontSize="12" ID="5" Position="40.6,90.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>renderDropDown</String>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="6" Position="40.6,117.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>renderTextArea</String>
+      </Note>
+      <Note Width="71.4844" FontSize="12" ID="7" Position="40.6,144.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>renderField</String>
+      </Note>
+      <Note Width="165.625" FontSize="12" ID="9" Position="60.9,28.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Redux-Form Custom Fields</String>
+      </Note>
+      <Note Width="337.5" FontSize="12" ID="11" Position="324.2,2.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Maintains the state of the form:
+currApplication &amp;
+groupList
+
+Passes down what state the AddQVVarForm should be in:
+ - Showing only application field 
+ - Showing all input fields
+
+Passes down the functions
+ - saveToServer(data)
+ - onClearForm()
+Only issue is both of these forms use the destroy() form, maybe this should be implemented in AddQVVarForm.</String>
+      </Note>
+   </Notes>
+   <BackgroundShapes>
+      <Shape Width="216.406" Faded="No" Height="154.688" Sticky="No" ID="8" Position="32.8,26.6" Shadow="No">
+         <Appearance>
+            <Border Weight="1" Style="Rounded"/>
+         </Appearance>
+      </Shape>
+      <Shape Width="139.978" Faded="No" Height="76.9531" Sticky="No" ID="10" Position="685.2,97.7" Shadow="No">
+         <Appearance>
+            <Fill>0.898329 0.817472 0.865339</Fill>
+            <Border Weight="1">0.690303 0.407263 0.550912</Border>
+         </Appearance>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
+         <PointsToNoteIDs>0</PointsToNoteIDs>
+      </Shape>
+   </BackgroundShapes>
+   <NoteStyles>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Yellow Bubble" ID="CCB8FC7A-2D3D-4B34-871E-1290E8E4B851" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.769436 0.762219 0.390143</BorderColor>
+         <FillColor>0.912963 0.894118 0.644541</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Brown Bubble" ID="FCDE2F9F-204F-4BE6-B140-4404578A3481" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.269490 0.164034 0.186694</BorderColor>
+         <FillColor>0.934157 0.888319 0.785290</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Red Text" ID="326C0C39-C53F-441F-9664-00301BA3C494" AffectTextColor="Yes" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <TextColor>1.0 0.0 0.0</TextColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Blue Bubble" ID="C746539B-CB40-4839-BD21-D60D85EFC8CB" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.485893 0.568933 0.756207</BorderColor>
+         <FillColor>0.844068 0.869596 0.923064</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Pink Bubble" ID="0948F8DA-14B1-4FC7-9908-76557C093C0F" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.690303 0.407263 0.550912</BorderColor>
+         <FillColor>0.898329 0.817472 0.865339</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Green Bubble" ID="C6F45D33-15DD-4600-8016-7C603D8D2847" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.399100 0.583322 0.354864</BorderColor>
+         <FillColor>0.808835 0.872419 0.801343</FillColor>
+      </Style>
+      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Title Text" ID="473EA182-247F-4CC4-9A91-641D3F301805" AffectTextColor="No" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <IsBold>Yes</IsBold>
+         <FontSize>12.0</FontSize>
+      </Style>
+   </NoteStyles>
+   <UISettings>
+      <BackgroundColor>1.0 0.988006 0.945006</BackgroundColor>
+      <DefaultFont>Helvetica</DefaultFont>
+      <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+   </UISettings>
+   <PrintSettings VerticalPagination="Auto" HorizontalPagination="Clip" Orientation="Portrait" RightMargin="12.000000" BottomMargin="12.000000" HorizontallyCentered="Yes" ScaleFactor="1.000000" PagesAcross="1" PaperType="na-letter" PagesDown="1" TopMargin="12.000000" Collates="Yes" PaperSize="-1.000000,-1.000000" LeftMargin="12.000000" VerticallyCentered="Yes"/>
+</ScappleDocument>

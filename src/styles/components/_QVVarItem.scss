@@ -1,0 +1,36 @@
+.field-item {
+	border: 1px solid $dark-border;
+	background-color: $text-background;
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+/*When displaying all of the variable properties*/
+.variable-display {
+	border: 1px dashed #692a2a;
+	margin: 10px 0;
+	padding: 15px 0;
+	background: #ebebeb;
+}
+
+.variable-display .field-item {
+	border-radius: 0;
+	background-color: #e7e7e7;
+	font-weight: normal;
+}
+
+.variable-display .var-name {
+	font-weight: bold;
+}
+
+.variable-display label {
+	font-weight: bold;
+}
+
+.locked {
+	background-color: #b53519 !important;
+}

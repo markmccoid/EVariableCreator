@@ -1,0 +1,13 @@
+//---AppViewRow Component Styling;
+.appview-row {
+	border: 1px solid #bbbbbb;
+	border-bottom: 0;
+	align-items: center;
+	padding: 5px 0;
+	margin: 0 10px !important;
+}
+
+.appview-column {
+	justify-content: center;
+	border-left: 1px solid #bbbbbb;
+}

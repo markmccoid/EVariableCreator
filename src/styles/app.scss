@@ -1,0 +1,21 @@
+@import "base/variables";
+
+//foundation
+@import "base/foundation-settings";
+
+@import "../../node_modules/foundation-sites/scss/foundation";
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+//@include foundation-everything(true); //telling it we want to use Flexbox mode
+
+// components
+@import "components/callout-auth";
+@import "components/page-titles";
+@import "components/Link";
+@import "components/helpers";
+@import "components/semanticui";
+@import "components/mainDisplay";
+@import "components/QVVarItem";
+@import "components/QVVarDisplay";
+@import "components/QVVarItemEdit";
+@import "components/ManageApplications";

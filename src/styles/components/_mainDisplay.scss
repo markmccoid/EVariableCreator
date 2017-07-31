@@ -1,0 +1,33 @@
+ul.menu.vertical {
+	li a {
+		display: inline-block;
+		width: 100%;
+		padding: 5px 0 5px 10px;
+	}
+	li {
+		border: 1px solid $border;
+		border-bottom: none;
+		border-right: none;
+		border-left: none;
+		background-color: ghostwhite;
+		font-size: 16px;
+	}
+	li:last-child {
+		border-bottom:1px solid $border;
+	}
+	li:hover {
+		background-color: gainsboro;
+	}
+
+	li.tt-active {
+		background-color: gainsboro;
+		font-weight: bold;
+	}
+	li div.details {
+		font-size: 12px;
+		padding: .25rem;
+		margin-top: .5rem;
+		color: black;
+		border: 1px dashed $border;
+	}
+}
