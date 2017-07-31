@@ -19,7 +19,7 @@ class MainDisplay extends React.Component {
 		return (
 			<div className="row">
 				<div className="columns callout secondary small-2"
-							style={{padding: "5px 0", marginLeft: "15px", marginBottom:"0px"}}>
+							style={{padding: "5px 0", marginLeft: "15px", marginBottom:"0px", minWidth: "200px", maxWidth: "200px"}}>
 					<h5 className="text-center">Application List</h5>
 					<ul className="menu vertical">
 						<QVAppList

@@ -33,9 +33,8 @@ export const getApplicationVariables = appName => {
 
 //Returns XML for the variables for the passed appName (application)
 export const getXMLApplicationVariables = appName => {
-		console.log(`/api/variables/app/${appName}?format=xml`);
-		return axios.get(`/api/variables/app/${appName}?format=xml`)
-			.then(response => response.data);
+		return nfa.getXMLData(appName)
+			.then(response => response);
 };
 
 //Update the qvVariables.json file with the data in varToUpdate.

@@ -274,23 +274,23 @@ const deleteAppName = idToDelete => {
 //Takes the appName and writes out an XML file of the groups data to the Spreadsheets directory
 //returns the applicationGroups data
 const getXMLData = appName => {
-	return readGroupsForApp(appName)
-		.then(applicationGroups => {
+	return getApplicationVariables(appName)
+		.then(applicationVars => {
 			let appNameSansSpaces = appName.replace(/\s+/g, '');
 			const x2js = new X2JS();
-			let xmlString = x2js.js2xml({group: applicationGroups});
+			let xmlString = x2js.js2xml({group: applicationVars});
 			//Enclose xml created with the appName, otherwise Qlik won't recognize properly
-			applicationGroups = `<${appNameSansSpaces}>${xmlString}</${appNameSansSpaces}>`;
+			applicationVars = `<${appNameSansSpaces}>${xmlString}</${appNameSansSpaces}>`;
 			//write the groups array back to the server disk navigating to the include directory
 			let xmlFilePathName = process.env.NODE_ENV === 'development' ?
-							 path.join(remote.app.getAppPath(), '../Spreadsheets/', `${appName}Groups.xml`)
+							 path.join(remote.app.getAppPath(), '../Spreadsheets/', `${appName}.xml`)
 							 :
-							 path.join(path.dirname(remote.app.getPath('exe')), '../Spreadsheets/', `${appName}Groups.xml`);
-			fs.writeFile(xmlFilePathName, applicationGroups, (err) => {
-				if (err) console.log(`Error Writing: ${appName}Groups.xml`, err)
-				console.log(`file written: ${appName}Groups.xml`);
+							 path.join(path.dirname(remote.app.getPath('exe')), '../Spreadsheets/', `${appName}.xml`);
+			fs.writeFile(xmlFilePathName, applicationVars, (err) => {
+				if (err) console.log(`Error Writing: ${appName}.xml`, err)
+				console.log(`file written: ${appName}.xml`);
 			});
-			return applicationGroups;
+			return applicationVars;
 		});
 }
 module.exports = {
@@ -303,5 +303,6 @@ module.exports = {
 	getApplicationData: getApplicationData,
 	addAppName: addAppName,
 	updateAppName: updateAppName,
-	deleteAppName: deleteAppName
+	deleteAppName: deleteAppName,
+	getXMLData: getXMLData
 }
