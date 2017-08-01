@@ -293,16 +293,17 @@ const getXMLData = appName => {
 			return applicationVars;
 		});
 }
+
 module.exports = {
-	getApplicationNames: getApplicationNames,
-  addQlikVariable:addQlikVariable,
-	getQlikVariables: getQlikVariables,
-	updateQlikVariable: updateQlikVariable,
-	deleteQlikVariable: deleteQlikVariable,
-	getApplicationVariables: getApplicationVariables,
-	getApplicationData: getApplicationData,
-	addAppName: addAppName,
-	updateAppName: updateAppName,
-	deleteAppName: deleteAppName,
-	getXMLData: getXMLData
+	getApplicationNames,
+  addQlikVariable,
+	getQlikVariables,
+	updateQlikVariable,
+	deleteQlikVariable,
+	getApplicationVariables,
+	getApplicationData,
+	addAppName,
+	updateAppName,
+	deleteAppName,
+	getXMLData
 }
