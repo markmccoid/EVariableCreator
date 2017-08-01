@@ -126,49 +126,47 @@ class AddQVVarForm extends React.Component {
 			  });
 		};
   	const noSpaces = value => value.replace(/ /g,'');
-
-		let formNextFields = '';
-		if (renderAllFields) {
-			formNextFields =
-				<div>
-					<div className="column small-3">
-							<Field name="group" component={renderDropDown} type="select" placeholder="Group" data={[GROUP_DROPDOWN_DEFAULT, ...this.props.groupList]} onCheckboxChange={onCheckBoxChange}/>
-							<a onClick={addNewGroup}>Add New Group</a>
-					</div>
-					<div className="column small-6">
-						<Field name="name" component={renderField} type="text" placeholder="Name(no spaces)" normalize={noSpaces}/>
-					</div>
-					<div className="column small-12">
-						<Field name="description" component={renderField} type="text" placeholder="Description"/>
-					</div>
-					<div className="column small-12">
-						<Field name="expression" component={renderTextArea} type="text" placeholder="Expression"/>
-					</div>
-					<div className="column small-8">
-						<Field name="notes" component={renderTextArea} type="text" placeholder="Notes"/>
-					</div>
-					<div className="column small-4">
-						<Field name="locked" component={renderField} type="checkbox" placeholder="Locked"/>
-					</div>
-					<div className="column small-12">
-						<button
-								type="submit"
-								className="button small"
-								style={{marginRight:"5px"}}
-								disabled={invalid || submitting}
-						>Save</button>
-					<button className="button small" onClick={() => {
-							this.props.onClearForm();
-							this.props.destroy({form: "qvAddVar"});
-						}}>Clear</button>
-					</div>
-				</div>;
+		//Set the form fields after the Application name to nothing until an application is chosen
+		let formNextFields = [];
+		if (renderAllFields) { //When application is chosen render rest of fields.
+			formNextFields.push(<div className="column small-3">
+														<Field name="group" component={renderDropDown} type="select" placeholder="Group" data={[GROUP_DROPDOWN_DEFAULT, ...this.props.groupList]} onCheckboxChange={onCheckBoxChange}/>
+														<a onClick={addNewGroup}>Add New Group</a>
+												</div>);
+			formNextFields.push(<div className="column small-6">
+														<Field name="name" component={renderField} type="text" placeholder="Name(no spaces)" normalize={noSpaces}/>
+													</div>);
+			formNextFields.push(<div className="column small-12">
+														<Field name="description" component={renderField} type="text" placeholder="Description"/>
+													</div>);
+			formNextFields.push(<div className="column small-12">
+														<Field name="expression" component={renderTextArea} type="text" placeholder="Expression"/>
+													</div>);
+			formNextFields.push(<div className="column small-8">
+														<Field name="notes" component={renderTextArea} type="text" placeholder="Notes"/>
+													</div>);
+			formNextFields.push(<div className="column small-4">
+														<Field name="locked" component={renderField} type="checkbox" placeholder="Locked"/>
+													</div>);
+			formNextFields.push(<div className="column small-12">
+														<button
+																type="submit"
+																className="button small"
+																style={{marginRight:"5px"}}
+																disabled={invalid || submitting}
+														>Save</button>
+													<button className="button small" onClick={() => {
+															this.props.onClearForm();
+															this.props.destroy({form: "qvAddVar"});
+														}}>Clear</button>
+													</div>);
 		}
+
 		return (
 			<div className="row">
-				<div className="columns callout secondary" style={{margin:"0 15px"}}>
+				<div className="columns callout secondary">
 					<h4>Add Qlikview Variable</h4>
-						<form onSubmit={handleSubmit(data => {
+						<form className="row" onSubmit={handleSubmit(data => {
 									console.log('submit: before save destroy');
 									//this.props.destroy({form: "qvAddVar"});
 									console.log('submit: before save toServer');

@@ -1,6 +1,23 @@
 import React from 'react';
 import { getApplicationNames } from '../../api';
 import ExportXML from './ExportXML';
+import styled from 'styled-components';
+
+//----Styled Components --------------------//
+const Row = styled.div`
+	display: flex;
+	flex-direction: row;
+`;
+
+const Sidebar = styled.div`
+	width: 200px;
+`;
+
+const MainContent = styled.div`
+	width: 100%;
+	margin: 0 !important;
+`;
+//----------------------------------------
 
 class ExportContainer extends React.Component {
 	state = {
@@ -15,8 +32,8 @@ class ExportContainer extends React.Component {
 	render() {
 
 			return (
-			<div className="row">
-				<div className="columns callout secondary" style={{margin:"0 15px"}}>
+			<Row>
+				<div className="columns callout secondary" >
 					Export XML
 					{this.state.applicationNames.map((appName) => {
 						return <ExportXML key={appName} appName={appName} />
@@ -24,7 +41,7 @@ class ExportContainer extends React.Component {
 					}
 
 				</div>
-			</div>
+			</Row>
 		);
 	}
 }
