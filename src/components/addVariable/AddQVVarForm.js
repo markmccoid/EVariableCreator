@@ -129,26 +129,26 @@ class AddQVVarForm extends React.Component {
 		//Set the form fields after the Application name to nothing until an application is chosen
 		let formNextFields = [];
 		if (renderAllFields) { //When application is chosen render rest of fields.
-			formNextFields.push(<div className="column small-3">
+			formNextFields.push(<div key="fnf1" className="column small-3">
 														<Field name="group" component={renderDropDown} type="select" placeholder="Group" data={[GROUP_DROPDOWN_DEFAULT, ...this.props.groupList]} onCheckboxChange={onCheckBoxChange}/>
 														<a onClick={addNewGroup}>Add New Group</a>
 												</div>);
-			formNextFields.push(<div className="column small-6">
+			formNextFields.push(<div key="fnf2" className="column small-6">
 														<Field name="name" component={renderField} type="text" placeholder="Name(no spaces)" normalize={noSpaces}/>
 													</div>);
-			formNextFields.push(<div className="column small-12">
+			formNextFields.push(<div key="fnf3" className="column small-12">
 														<Field name="description" component={renderField} type="text" placeholder="Description"/>
 													</div>);
-			formNextFields.push(<div className="column small-12">
+			formNextFields.push(<div key="fnf4" className="column small-12">
 														<Field name="expression" component={renderTextArea} type="text" placeholder="Expression"/>
 													</div>);
-			formNextFields.push(<div className="column small-8">
+			formNextFields.push(<div key="fnf5" className="column small-8">
 														<Field name="notes" component={renderTextArea} type="text" placeholder="Notes"/>
 													</div>);
-			formNextFields.push(<div className="column small-4">
+			formNextFields.push(<div key="fnf6" className="column small-4">
 														<Field name="locked" component={renderField} type="checkbox" placeholder="Locked"/>
 													</div>);
-			formNextFields.push(<div className="column small-12">
+			formNextFields.push(<div key="fnf7" className="column small-12">
 														<button
 																type="submit"
 																className="button small"
@@ -167,9 +167,7 @@ class AddQVVarForm extends React.Component {
 				<div className="columns callout secondary">
 					<h4>Add Qlikview Variable</h4>
 						<form className="row" onSubmit={handleSubmit(data => {
-									console.log('submit: before save destroy');
 									//this.props.destroy({form: "qvAddVar"});
-									console.log('submit: before save toServer');
 									this.props.onSaveToSever(data);
 								})
 							}>

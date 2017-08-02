@@ -61,7 +61,6 @@ class QVVarItemEdit extends React.Component {
 	}
 	renderLockedInput (props) {
 		const lockedValue = props.input.value
-		console.log('renderLockedInput', lockedValue);
 		return (
 			<div>
 				<label style={{height:"28px"}}>{props.placeholder}:</label>

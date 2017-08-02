@@ -31,6 +31,7 @@ console.log(process.env.NODE_ENV);
 	if (process.env.NODE_ENV === 'development') {
 		mainWindow.toggleDevTools();
 	}
+
 	mainWindow.on('ready-to-show', () => {
 		mainWindow.show();
 	})

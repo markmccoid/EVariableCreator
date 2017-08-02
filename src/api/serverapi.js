@@ -41,7 +41,7 @@ export const getXMLApplicationVariables = appName => {
 export const updateQlikVariable = varToUpdate => {
 		return nfa.updateQlikVariable(varToUpdate)
 			.then(response => {
-				if (response.status === 200) {
+				if (response === 200) {
 					return 'Variable updated Successfully';
 				}
 				return response;
