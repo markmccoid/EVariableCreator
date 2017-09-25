@@ -6,24 +6,24 @@ import Navbar from 'Navbar';
 
 
 class Main extends React.Component {
-constructor(props) {
-	super(props);
+  constructor(props) {
+    super(props);
 
-}
-	render() {
-		return (
-			<div >
-					<Navbar user={this.props.user}/>
-					{this.props.children}
-			</div>
-		);
-	}
+  }
+  render() {
+    return (
+      <div >
+        <Navbar user={this.props.user}/>
+        {this.props.children}
+      </div>
+    );
+  }
 }
 
-const mapStateToProps = state => {
-	return {
-		user: state.appState.user
-	};
+const mapStateToProps = (state) => {
+  return {
+    user: state.appState.user
+  };
 };
 
 export default connect(mapStateToProps)(Main);
