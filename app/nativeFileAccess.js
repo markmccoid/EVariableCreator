@@ -278,7 +278,7 @@ const getXMLData = appName => {
 		.then(applicationVars => {
 			let appNameSansSpaces = appName.replace(/\s+/g, '');
 			const x2js = new X2JS();
-			let xmlString = x2js.js2xml({group: applicationVars});
+			let xmlString = x2js.js2xml({variable: applicationVars});
 			//Enclose xml created with the appName, otherwise Qlik won't recognize properly
 			applicationVars = `<${appNameSansSpaces}>${xmlString}</${appNameSansSpaces}>`;
 			//write the groups array back to the server disk navigating to the include directory
