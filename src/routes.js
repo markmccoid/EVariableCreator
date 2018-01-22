@@ -30,10 +30,10 @@ import SettingsContainer from './components/settings/SettingsContainer';
 //---------------------
 //--The other option for restricting access to components is to use the componentWillMount lifecycle
 //--function, with the authorization info pulled from the redux store
-	// componentWillMount() {
-	// 	//This will make sure that only users who are logged in will be able to access this component.
-	// 	this.props.authStatus === AUTH_LOGGED_IN ? null : hashHistory.push('/');
-	// }
+  // componentWillMount() {
+  // 	//This will make sure that only users who are logged in will be able to access this component.
+  // 	this.props.authStatus === AUTH_LOGGED_IN ? null : hashHistory.push('/');
+  // }
 
 //--The route post/:id is a parameter route.  This means that
 //--react-router will push whatever is send after post/... into
@@ -43,7 +43,6 @@ import SettingsContainer from './components/settings/SettingsContainer';
 export default (
 	<Route path="/" component={Main}>
 		<IndexRoute component={MainDisplay}/>
-
 		<Route path="addqvvar" component={AddQVVarContainer} />
 		<Route path="settings" component={SettingsContainer} />
 		<Route path="export" component={ExportContainer} />

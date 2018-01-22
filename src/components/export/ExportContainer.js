@@ -5,45 +5,43 @@ import styled from 'styled-components';
 
 //----Styled Components --------------------//
 const Row = styled.div`
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 `;
 
 const Sidebar = styled.div`
-	width: 200px;
+  width: 200px;
 `;
 
 const MainContent = styled.div`
-	width: 100%;
-	margin: 0 !important;
+  width: 100%;
+  margin: 0 !important;
 `;
 //----------------------------------------
 
 class ExportContainer extends React.Component {
-	state = {
-		applicationNames: []
-	}
-	componentDidMount() {
-		getApplicationNames()
-			.then((data) => {
-				this.setState({applicationNames: data});
-			});
-	}
-	render() {
-
-			return (
-			<Row>
-				<div className="columns callout secondary" >
-					Export XML
-					{this.state.applicationNames.map((appName) => {
-						return <ExportXML key={appName} appName={appName} />
-						})
-					}
-
-				</div>
-			</Row>
-		);
-	}
+  state = {
+    applicationNames: []
+  }
+  componentDidMount() {
+    getApplicationNames()
+      .then((data) => {
+        this.setState({applicationNames: data});
+      });
+  }
+  render() {
+    return (
+      <Row>
+        <div className="columns callout secondary" >
+          Export XML
+          {this.state.applicationNames.map((appName) => {
+            return <ExportXML key={appName} appName={appName} />
+          })
+          }
+        </div>
+      </Row>
+    );
+  }
 }
 
 export default ExportContainer;

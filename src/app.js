@@ -47,8 +47,8 @@ require('style!css!antd/dist/antd.min.css');
 
 //path="/" designates the root of the application
 ReactDOM.render(
-	<Provider store={store}>
-		<Router history={hashHistory} routes={routes} />
-	</Provider>,
+  <Provider store={store}>
+    <Router history={hashHistory} routes={routes} />
+  </Provider>,
   document.getElementById('app')
 );

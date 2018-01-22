@@ -12,41 +12,41 @@ import { appStateReducer } from '../reducers/appStateReducer';
 
 
 //!!!!--Take out in production -- Using for testing to make sure not mutating state in reducers
-import freeze from 'redux-freeze';
+//import freeze from 'redux-freeze';
 
 //Setup the initil redux state
 const INITIAL_STATE = {
-			applications: {
-				applicationList: [],
-				selectedApplication: ''
-			},
-			qvVariables: [],
-			appState: {
-				selectedGroup: '',
-				selectedVariableId: null,
-				editing: false,
-				searchText: '',
-				hideLocked: false,
-				user: 'user'
-			}
-		};
+  applications: {
+    applicationList: [],
+    selectedApplication: ''
+  },
+  qvVariables: [],
+  appState: {
+    selectedGroup: '',
+    selectedVariableId: null,
+    editing: false,
+    searchText: '',
+    hideLocked: false,
+    user: 'user'
+  }
+};
 //--------------------------------------------
 //-Create Store - This is called from app.js
 //--------------------------------------------
 export var configure = (initialState = INITIAL_STATE) => {
 //define which pieces of state are handled by which reducer
-	var reducer = combineReducers({
-			applications: applicationsReducer,
-			qvVariables: qvVariableReducer,
-			appState: appStateReducer,
-			form: formReducer
-	});
-//Create the store that will be returned.
-	var store = createStore(reducer, initialState, compose(applyMiddleware(promise, thunk, freeze),
-			window.devToolsExtension ? window.devToolsExtension() : f => f));
+  var reducer = combineReducers({
+    applications: applicationsReducer,
+    qvVariables: qvVariableReducer,
+    appState: appStateReducer,
+    form: formReducer
+  });
+  //Create the store that will be returned.
+  var store = createStore(reducer, initialState, compose(applyMiddleware(promise, thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f));
 
-	return store;
-}
+  return store;
+};
 
 //From Redux documentation -- Thinking I could use this to apply the Promise middleware.
 // import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
